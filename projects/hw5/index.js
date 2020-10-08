@@ -105,6 +105,7 @@ function updateFilter(filterValue) {
   for (const town of towns) {
     if (filterValue && isMatching(town.name, filterValue)) {
       const townDiv = document.createElement('div');
+      townDiv.textContent = `${town.name}`;
       fragment.append(townDiv);
     }
   }
